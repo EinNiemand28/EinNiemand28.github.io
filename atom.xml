@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-21T02:39:16.716Z</updated>
+  <updated>2022-02-21T02:50:54.638Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
     <id>http://example.com/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/</id>
     <published>2022-02-20T13:48:35.000Z</published>
-    <updated>2022-02-21T02:39:16.716Z</updated>
+    <updated>2022-02-21T02:50:54.638Z</updated>
     
-    <content type="html"><![CDATA[<p>高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Github Pages、Wordpress、Typecho、Gridea，后来因为高中没有资金、github各种被墙，还是滚回博客园。后来上面的问题差不多解决以后，还是用github。值得一提的是，之前用这个做了好几回网站，每次都是各种错误失败告终，毕竟还是作为一个小白生搬硬套教程，各种操作也没搞明白有个啥用。</p><hr><p>大一上终于搞了一个有点样子的博客，域名也安排上了，然后美化教程又是‘四处乱抄’，最后都不知道魔改了哪些地方了，终于在被大一琐事压得can’t breathe而搁置了三个月博客之后，把什么都忘得差不多了，最后升级主题乱搞失败后的发现忘备份了。</p><p>索性把所有东西删掉重新再来，同时痛定思痛这次一定好好写个建站日志啥的、操作也搞规范点😣</p><hr><p>Hexo+Github搭建框架</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/6ef63e2d/</span><br><span class="line"></span><br><span class="line">https://venusnero.github.io/2019/01/23/build_hexo_github_blog/</span><br></pre></td></tr></table></figure><p>Picgo图床</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://picgo.github.io/PicGo-Doc/zh/guide/config.html</span><br></pre></td></tr></table></figure><p>Namesilo域名（<del>价格巨香</del>）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/33921436</span><br><span class="line">https://zhuanlan.zhihu.com/p/86961133</span><br></pre></td></tr></table></figure><p>hexo-admin</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/nineya_com/article/details/103380243</span><br><span class="line">https://www.jianshu.com/p/ee47432c7e37</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Github Pages、Wordpress、Typecho、Gridea，后来因为高中没有资金、github各种被墙，还是滚回博客园。后来上面的问题差不多解决以后，还是用github。值得一提的是，之前用这个做了好几回网站，每次都是各种错误失败告终，毕竟还是作为一个小白生搬硬套教程，各种操作也没搞明白有个啥用。</p><hr><p>大一上终于搞了一个有点样子的博客，域名也安排上了，然后美化教程又是‘四处乱抄’，最后都不知道魔改了哪些地方了，终于在被大一琐事压得can’t breathe而搁置了三个月博客之后，把什么都忘得差不多了，最后升级主题乱搞失败后的发现忘备份了。</p><p>索性把所有东西删掉重新再来，同时痛定思痛这次一定好好写个建站日志啥的、操作也搞规范点😣</p><hr><p>Hexo+Github搭建框架</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/6ef63e2d/</span><br><span class="line"></span><br><span class="line">https://venusnero.github.io/2019/01/23/build_hexo_github_blog/</span><br></pre></td></tr></table></figure><p>Picgo图床</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://picgo.github.io/PicGo-Doc/zh/guide/config.html</span><br></pre></td></tr></table></figure><p>Namesilo域名（<del>价格巨香</del>）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/33921436</span><br><span class="line">https://zhuanlan.zhihu.com/p/86961133</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
