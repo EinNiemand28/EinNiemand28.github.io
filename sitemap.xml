@@ -40,7 +40,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -48,14 +48,14 @@
   
   <url>
     <loc>http://example.com/tags/Butterfly/</loc>
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -64,7 +64,7 @@
   
   <url>
     <loc>http://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
