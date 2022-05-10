@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/</loc>
+    <loc>https://einniemand.top/2022/02/20/hello-world/</loc>
     
-    <lastmod>2022-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/index.html</loc>
-    
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-05-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://einniemand.top/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/</loc>
     
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-05-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/2022/02/20/hello-world/</loc>
+    <loc>https://einniemand.top/categories/index.html</loc>
     
-    <lastmod>2022-02-20</lastmod>
+    <lastmod>2022-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://einniemand.top/tags/index.html</loc>
+    
+    <lastmod>2022-05-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -39,23 +39,23 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <loc>https://einniemand.top/</loc>
+    <lastmod>2022-05-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://example.com/tags/Butterfly/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <loc>https://einniemand.top/tags/Butterfly/</loc>
+    <lastmod>2022-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <loc>https://einniemand.top/tags/Hexo/</loc>
+    <lastmod>2022-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -63,8 +63,8 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2022-02-21</lastmod>
+    <loc>https://einniemand.top/categories/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2022-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

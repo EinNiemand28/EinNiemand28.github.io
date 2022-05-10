@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>EinNiemand&#39;s Blog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://einniemand.top/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2022-02-21T02:50:54.638Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://einniemand.top/"/>
+  <updated>2022-05-10T07:45:39.602Z</updated>
+  <id>https://einniemand.top/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>EinNiemand</name>
     
   </author>
   
@@ -18,36 +18,36 @@
   
   <entry>
     <title>新的历程</title>
-    <link href="http://example.com/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
-    <id>http://example.com/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/</id>
-    <published>2022-02-20T13:48:35.000Z</published>
-    <updated>2022-02-21T02:50:54.638Z</updated>
+    <link href="https://einniemand.top/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
+    <id>https://einniemand.top/2022/02/20/%E6%96%B0%E7%9A%84%E5%8E%86%E7%A8%8B/</id>
+    <published>2022-02-20T21:48:35.000Z</published>
+    <updated>2022-05-10T07:45:39.602Z</updated>
     
-    <content type="html"><![CDATA[<p>高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Github Pages、Wordpress、Typecho、Gridea，后来因为高中没有资金、github各种被墙，还是滚回博客园。后来上面的问题差不多解决以后，还是用github。值得一提的是，之前用这个做了好几回网站，每次都是各种错误失败告终，毕竟还是作为一个小白生搬硬套教程，各种操作也没搞明白有个啥用。</p><hr><p>大一上终于搞了一个有点样子的博客，域名也安排上了，然后美化教程又是‘四处乱抄’，最后都不知道魔改了哪些地方了，终于在被大一琐事压得can’t breathe而搁置了三个月博客之后，把什么都忘得差不多了，最后升级主题乱搞失败后的发现忘备份了。</p><p>索性把所有东西删掉重新再来，同时痛定思痛这次一定好好写个建站日志啥的、操作也搞规范点😣</p><hr><p>Hexo+Github搭建框架</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/6ef63e2d/</span><br><span class="line"></span><br><span class="line">https://venusnero.github.io/2019/01/23/build_hexo_github_blog/</span><br></pre></td></tr></table></figure><p>Picgo图床</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://picgo.github.io/PicGo-Doc/zh/guide/config.html</span><br></pre></td></tr></table></figure><p>Namesilo域名（<del>价格巨香</del>）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/33921436</span><br><span class="line">https://zhuanlan.zhihu.com/p/86961133</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h3><p>高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Github Pages、Wordpress、Typecho、Gridea，后来因为高中没有资金、github各种被墙，还是滚回博客园。后来上面的问题差不多解决以后，还是用github。值得一提的是，之前用这个做了好几回网站，每次都是各种错误失败告终，毕竟还是作为一个小白生搬硬套教程，各种操作也没搞明白有个啥用。</p><hr><p>大一上终于搞了一个有点样子的博客，域名也安排上了，然后美化教程又是‘四处乱抄’，最后都不知道魔改了哪些地方了，终于在被大一琐事压得can’t breathe而搁置了三个月博客之后，把什么都忘得差不多了，最后升级主题乱搞失败后的发现忘备份了😤</p><p>索性把所有东西删掉重新再来，同时痛定思痛这次一定好好写个建站日志啥的、操作也搞规范点😣</p><hr><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>Hexo+Github搭建框架</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/6ef63e2d/</span><br><span class="line"></span><br><span class="line">https://venusnero.github.io/2019/01/23/build_hexo_github_blog/</span><br></pre></td></tr></table></figure><p>Picgo图床</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://picgo.github.io/PicGo-Doc/zh/guide/config.html</span><br></pre></td></tr></table></figure><p>Namesilo域名（<del>价格巨香</del>）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/33921436</span><br><span class="line">https://zhuanlan.zhihu.com/p/86961133</span><br></pre></td></tr></table></figure><p>vercel加速</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/812734f8/</span><br><span class="line">185.199.108.153</span><br></pre></td></tr></table></figure><hr><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><h4 id="域名相关-404"><a href="#域名相关-404" class="headerlink" title="域名相关 404"></a>域名相关 404</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CNAME文件是github page 绑定域名需要添加的文件，在setting页面上设置会自动生成该文件。</span><br><span class="line">而当执行hexo d后将 public 目录中的文件和目录推送至 _config.yml 中指定的远端仓库和分支中，并且完全覆盖该分支下的已有内容。</span><br><span class="line">也就是说因为public 文件下没有CNAME文件，所以推送的时候远程分支的内容因为被完全覆盖所以CNAME文件也会被删除，所以就会导致404。</span><br><span class="line">而public下的文件是由source文件夹的内容生成的，因此正确的配置绑定域名方法应该是在source文件下（直接在public文件夹下也可以）新建CNAME文件并配置域名。</span><br></pre></td></tr></table></figure><h4 id="博客管理流程"><a href="#博客管理流程" class="headerlink" title="博客管理流程"></a>博客管理流程</h4><ol><li><p>本地进行修改</p></li><li><p>依次执行指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;...&quot;</span><br><span class="line">git push</span><br><span class="line"># 将改动推送到 GitHub</span><br></pre></td></tr></table></figure></li><li><p>然后执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li></ol><table><thead><tr><th><strong>常量名</strong></th><th><strong>常量释义</strong></th></tr></thead><tbody><tr><td><strong>$\text{[Blogroot]}$</strong></td><td>本地存放博客源码的文件夹路径</td></tr><tr><td><em>$\text{[SourceRepo]}$</em></td><td>存放博客源码的私有仓库名</td></tr><tr><td><strong>$\text{[SiteBlogRepo]}$</strong></td><td>存放编译好的博客页面的公有仓库名<br/>Site 指站点，教程中会替换成<br/>Github、Gitee、Coding</td></tr><tr><td><strong>$\text{[SiteUsername]}$</strong></td><td>用户名<br/>Site 指站点，教程中会替换成<br/>Github、Gitee、Coding</td></tr><tr><td><strong>$\text{[SiteToken]}$</strong></td><td>申请到的令牌码<br/>Site 指站点，教程中会替换成<br/>Github、Gitee、Coding</td></tr><tr><td><strong>$\text{[GithubEmail]}$</strong></td><td>与 github 绑定的主邮箱，建议使用 Gmail</td></tr><tr><td><strong>$\text{[TokenUser]}$</strong></td><td>Coding 配置特有的令牌用户名</td></tr></tbody></table><h3 id="魔改日记"><a href="#魔改日记" class="headerlink" title="魔改日记"></a>魔改日记</h3><p>引入阿里矢量图标库</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://akilar.top/posts/d2ebecef/</span><br><span class="line">https://blog.knlde.top/35</span><br><span class="line">彩色图标引入: https://akilar.top/posts/23fdf850</span><br></pre></td></tr></table></figure><p>标签外挂</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://butterfly.js.org/posts/4aa8abbe/#%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89</span><br><span class="line">https://akilar.top/posts/615e2dec</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Github Pages、Wordpress、Typecho、Gridea，后来因为高中没有资金、github各种被墙，还是滚回博客园。后来上面的问题差不</summary>
+    <summary type="html">&lt;h3 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h3&gt;&lt;p&gt;高中搞竞赛时萌生了写一个自己的博客这样的想法，用过博客园（开始各种从简，后来也找了很多大佬写的模版）、牛客网，后来接触过Gi</summary>
       
     
     
     
-    <category term="杂谈" scheme="http://example.com/categories/%E6%9D%82%E8%B0%88/"/>
+    <category term="杂谈" scheme="https://einniemand.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-    <category term="Butterfly" scheme="http://example.com/tags/Butterfly/"/>
+    <category term="Butterfly" scheme="https://einniemand.top/tags/Butterfly/"/>
     
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://einniemand.top/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/02/20/hello-world/"/>
-    <id>http://example.com/2022/02/20/hello-world/</id>
-    <published>2022-02-20T12:20:00.000Z</published>
-    <updated>2022-02-20T12:52:38.845Z</updated>
+    <link href="https://einniemand.top/2022/02/20/hello-world/"/>
+    <id>https://einniemand.top/2022/02/20/hello-world/</id>
+    <published>2022-02-20T20:20:00.000Z</published>
+    <updated>2022-05-10T07:45:39.602Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
