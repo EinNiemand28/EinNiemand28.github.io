@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>BUAA-OO-2024-Unit4 | EinNiemand's Blog</title><meta name="author" content="EinNiemand"><meta name="copyright" content="EinNiemand"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="正向建模与开发 正向建模与开发是指从需求分析开始，通过逐步细化需求，创建模型，并最终开发出软件的过程。这种方法强调从抽象到具体、从概念到实现的系统性过程。 而本单元正式所使用 UML（Unified Modeling Language）建模语言则是贯彻上述理念的一个很好的工具。在之前几个单元的设计中，我们虽然已经开始对 UML 有一些接触，但只是局限于用它来对每单元最后的迭代结果进行总结分析。既然">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BUAA-OO-2024-Unit4">
+<meta property="og:url" content="https://einniemand.top/1e5b8c04.html">
+<meta property="og:site_name" content="EinNiemand&#39;s Blog">
+<meta property="og:description" content="正向建模与开发 正向建模与开发是指从需求分析开始，通过逐步细化需求，创建模型，并最终开发出软件的过程。这种方法强调从抽象到具体、从概念到实现的系统性过程。 而本单元正式所使用 UML（Unified Modeling Language）建模语言则是贯彻上述理念的一个很好的工具。在之前几个单元的设计中，我们虽然已经开始对 UML 有一些接触，但只是局限于用它来对每单元最后的迭代结果进行总结分析。既然">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-zyxvqy_3840x2160.png">
+<meta property="article:published_time" content="2024-05-26T15:35:42.000Z">
+<meta property="article:modified_time" content="2025-12-23T15:36:25.932Z">
+<meta property="article:author" content="EinNiemand">
+<meta property="article:tag" content="OO">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-zyxvqy_3840x2160.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://einniemand.top/1e5b8c04.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":0},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: EinNiemand","link":"链接: ","source":"来源: EinNiemand's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'BUAA-OO-2024-Unit4',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-12-23 15:36:25'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="EinNiemand's Blog" type="application/atom+xml">
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/avatar.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>const loadingPercentage = document.getElementById("loading-percentage");
+loadingPercentage.style.color = "black";
+let loadingPercentageTimer = setInterval(function() {
+  var progressBar = document.querySelector(".pace-progress");
+  if (!progressBar) return
+  var currentValue = progressBar.getAttribute("data-progress-text");
+  if (currentValue !== loadingPercentage.textContent) {
+    loadingPercentage.textContent = currentValue;
+    if (currentValue === "100%") {
+      clearInterval(loadingPercentageTimer);
+    }
+  }
+}, 100);
+const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="EinNiemand's Blog"><span class="site-name">EinNiemand's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div><div id="nav-right"></div></nav><div id="post-info"><h1 class="post-title">BUAA-OO-2024-Unit4</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-26T15:35:42.000Z" title="发表于 2024-05-26 15:35:42">2024-05-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-23T15:36:25.932Z" title="更新于 2025-12-23 15:36:25">2025-12-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/BUAA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9E%84%E9%80%A0/">BUAA面向对象设计与构造</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="BUAA-OO-2024-Unit4"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/1e5b8c04.html#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="正向建模与开发">正向建模与开发</h2>
+<p>正向建模与开发是指从需求分析开始，通过逐步细化需求，创建模型，并最终开发出软件的过程。这种方法强调从抽象到具体、从概念到实现的系统性过程。</p>
+<p>而本单元正式所使用 UML（<code>Unified Modeling Language</code>）建模语言则是贯彻上述理念的一个很好的工具。在之前几个单元的设计中，我们虽然已经开始对 UML 有一些接触，但只是局限于用它来对每单元最后的迭代结果进行总结分析。既然有没有 UML 我们都<s>或好或坏</s>地完成了架构设计任务，那为什么还要花时间来接触这样一门建模语言呢？</p>
+<p>面向对象本质上定义了一个抽象语言系统</p>
+<ul>
+<li>词汇：对象、属性、操作、活动、流程、状态……</li>
+<li>语法：对象间连接、对象与数据间连接、对象与操作间连接、属性与操作间连接、属性与活动间连接、操作与状态间连接……</li>
+</ul>
+<p>我们作为面向对象的初学者，通过 oopre + oo 算是品尝了一番迭代开发的滋味，也许不必在意用这样的语言组成的话语会向别人传达什么信息，只要自己代码写得痛快并且能够理解就行。但也许未来我们可能会面对越来越复杂、迭代不止的软件开发任务，或者与他人进行合作开发；这个时候若还是看了眼需求埋头就写、边想边写，就有点不太现实了。</p>
+<p>UML 作为一种建模语言，它提供了一种标准的、统一的、可视化的建模方法，使得我们可以用一种统一的语言来描述软件系统的各个方面，从而使得我们能够更好地理解、分析、设计、实现、测试、维护软件系统。正向建模与开发就是一种系统化的软件开发方法，通过需求分析、系统建模、架构设计、详细设计、编码实现、集成测试和部署维护等步骤，确保软件开发过程的规范性和可控性。这种方法有助于提高软件开发的效率和质量，降低项目风险。</p>
+<p>不过，很多时候在一开始就通过建模语言设计好所有的架构是不现实的，因为需求总是会变化的。所以在实际开发中，我们可以采用增量式开发的方法，先设计好一个基本的架构，然后根据需求的变化逐步迭代，逐步完善。这样可以在保证软件质量的同时，也能够更好地适应需求的变化。而在这单元的实践中，我主要采用的是先用语言文字进行简单建模，然后再上手进行对应代码的具体实现。</p>
+<h2 id="unit4架构设计">Unit4架构设计</h2>
+<p>本单元的主要任务是模拟一个读书馆的管理系统，我们需要设计一个系统，能够管理读者、图书、借阅记录等信息。</p>
+<h3 id="最终架构">最终架构</h3>
+<h4 id="类图">类图</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/image-20240616225501640.png" alt="Model"></p>
+<h4 id="状态图-书籍">状态图（书籍）</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/image-20240616230019026.png" alt="StatechartDiagram"></p>
+<h4 id="顺序图-预约">顺序图（预约）</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/image-20240616230118188.png" alt="SequenceDiagram"></p>
+<h3 id="迭代过程">迭代过程</h3>
+<blockquote>
+<p>三次简易文字建模如下</p>
+</blockquote>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">##</span> hw13</span><br><span class="line"></span><br><span class="line">1. close后整理</span><br><span class="line">    - 借还处的书全部放回书架</span><br><span class="line">    - 预约处的过期（对预约的所有人）的书放回书架，删除预约表中记录</span><br><span class="line"></span><br><span class="line">2. open后整理</span><br><span class="line"></span><br><span class="line">    - 根据预约表和书架的情况取书到预约台，为指定用户保留五天并删除预约表中记录</span><br><span class="line"></span><br><span class="line">3. 开馆</span><br><span class="line"></span><br><span class="line">    - 借阅</span><br><span class="line">        - 先判断是否可从书架中取出</span><br><span class="line">        - 再根据用户持书情况判断此书的归属</span><br><span class="line">    - 还书</span><br><span class="line">        - 本次作业还书立即成功，书由用户<span class="built_in">$</span><span class="keyword">\to</span><span class="built_in">$</span>借还处</span><br><span class="line">    - 预约</span><br><span class="line">        - 根据持书情况判断是否允许该预约，若预约表中已有则拒绝这次预约</span><br><span class="line">        - 若预约成功，预约请求加入预约表</span><br><span class="line"></span><br><span class="line">    - 取书</span><br><span class="line">        - 预约处查询，若为其保存且是要取的书，则取书成功，删除预约表对应记录</span><br><span class="line">        - 否则失败</span><br><span class="line">    - 查询</span><br><span class="line">        - 直接查询书架情况即可</span><br><span class="line"></span><br><span class="line"><span class="params">##</span> hw14</span><br><span class="line"></span><br><span class="line">0. - 正式书籍：书架、预约处、借还处、用户</span><br><span class="line">    - 非正式书籍：借还处、漂流角、用户</span><br><span class="line">        - 不可预约、续借</span><br><span class="line">        - 由用户捐献，序列号与书架不同，且书号不重复（最多一本）</span><br><span class="line">1. close后整理</span><br><span class="line">    - 借还处的书根据不同情况全部送回（书架、漂流角）</span><br><span class="line">    - 预约处的过期（对预约的所有人）的书放回书架，删除预约表中记录</span><br><span class="line">2. open后整理</span><br><span class="line">    - 预约处的过期的书放回书架</span><br><span class="line">    - 根据预约表和书架的情况取书到预约处，为指定用户保留五天并删除预约表中记录</span><br><span class="line">3. 开馆</span><br><span class="line">    - 查询</span><br><span class="line">        - 根据`Type`查询书架或漂流角</span><br><span class="line">    - 借书</span><br><span class="line">        - 先判断是否可从书架中取出</span><br><span class="line">        - 再根据用户持书情况判断此书的归属，借书成功时设定还书期限</span><br><span class="line">    - 预约</span><br><span class="line">        - 非正式书籍不可预约</span><br><span class="line">        - 根据持书情况判断是否允许该预约，预约成功则预约请求加入预约表</span><br><span class="line">    - 还书</span><br><span class="line">        - 还书立即成功，需要判断是否逾期</span><br><span class="line">    - 取书</span><br><span class="line">        - 预约处查询，若为其保存且是要取的书，则取书成功，删除预约表对应记录，确定还书期限</span><br><span class="line">        - 否则失败</span><br><span class="line">    - 续借</span><br><span class="line">        - 还书期限前5天内才可续借，若有对该书的预约且书架上无书则失败</span><br><span class="line">        - 续借成功则还书期限延长30天</span><br><span class="line">    - 捐献</span><br><span class="line">        - 一定成功，直接放入漂流角</span><br><span class="line"></span><br><span class="line"><span class="params">##</span> hw15</span><br><span class="line"></span><br><span class="line">0. - 新增用户信用分（信用分可查询）</span><br><span class="line">    - 初始为10，上限20</span><br><span class="line">    - 信用分为负，不允许借书（扣在借还处）、预约、续借</span><br><span class="line">    - 按时还书+1，逾期后**立刻**-2</span><br><span class="line">    - 未按时取书-3</span><br><span class="line">    - 捐赠图书+2，变为正式书籍再+2</span><br></pre></td></tr></table></figure>
+<p>第一次设计时就采用了将管理操作分为开馆、闭馆、日常操作三个部分，并且使用单例模式来实现对于图书馆的管理。图书馆中包括书架、借还处、预约处以及用户数据等信息。设置<code>Appointment</code>类记录单次预约信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Library</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Library library;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">BookShelf</span> <span class="variable">bs</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BookShelf</span>(LibrarySystem.SCANNER.getInventory());</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">BorrowAndReturnOffice</span> <span class="variable">bro</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BorrowAndReturnOffice</span>();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">AppointmentOffice</span> <span class="variable">ao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AppointmentOffice</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">Library</span><span class="params">()</span> &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Library <span class="title function_">getInstance</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (library == <span class="literal">null</span>) &#123;</span><br><span class="line">            library = <span class="keyword">new</span> <span class="title class_">Library</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> library;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            LibraryCommand&lt;?&gt; command = LibrarySystem.SCANNER.nextCommand();</span><br><span class="line">            <span class="keyword">if</span> (command == <span class="literal">null</span>) &#123; <span class="keyword">break</span>; &#125;</span><br><span class="line">            <span class="keyword">if</span> (command.getCmd().equals(<span class="string">&quot;OPEN&quot;</span>)) &#123;</span><br><span class="line">                open();</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (command.getCmd().equals(<span class="string">&quot;CLOSE&quot;</span>)) &#123;</span><br><span class="line">                close();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                process((LibraryRequest) command.getCmd());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">open</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">close</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">process</span><span class="params">(LibraryRequest request)</span> &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>其实从文字版建模可以看出，我对预约请求的处理由“不许重复预约”（此时题目要求没有对管理策略进行限制）变化为“只要条件满足就允许”，也算是根据需求的变化而不断调整架构设计的:一个写照了。</p>
+<p>其他的内容就是不断添加新的功能，比如捐赠、图书升级、续借、信用分等，然后在原有的基础上新增漂流角、进行修改。</p>
+<p>比如对<code>User</code>类的属性进行了适当的修改：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String id;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Map&lt;LibraryBookId, Integer&gt; books; <span class="comment">// value值为还书期限</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">boolean</span> bookB; <span class="comment">// 是否持有B类书籍 </span></span><br><span class="line"><span class="keyword">private</span> <span class="type">boolean</span> bookBU; <span class="comment">// 是否持有BU类书籍</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> credit;</span><br></pre></td></tr></table></figure>
+<p>并增加续借、信用分等的处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">renew</span><span class="params">(LibraryBookId bookId, <span class="type">int</span> day)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">returnDue</span> <span class="operator">=</span> books.get(bookId);</span><br><span class="line">    books.put(bookId, returnDue + day);</span><br><span class="line">    <span class="keyword">return</span> returnDue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">changeCredit</span><span class="params">(<span class="type">int</span> change)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (credit + change &gt; <span class="number">20</span>) &#123; credit = <span class="number">20</span>; &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123; credit += change; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>给预约请求类<code>Appointment</code>增加<code>order</code>属性以决定分配书籍顺序：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Appointment</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">long</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">long</span> order;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> User user;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> LibraryBookId bookId;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Appointment</span><span class="params">(User user, LibraryBookId bookId)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.order = count++;</span><br><span class="line">        <span class="built_in">this</span>.user = user;</span><br><span class="line">        <span class="built_in">this</span>.bookId = bookId;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在开馆前整理时，对预约请求进行处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Appointment&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(requestSet);</span><br><span class="line">tmp.sort((o1, o2) -&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (o1.equals(o2) || o1.getOrder() == o2.getOrder()) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">    <span class="keyword">return</span> Long.compare(o1.getOrder(), o2.getOrder());</span><br><span class="line">&#125;);</span><br><span class="line">tmp.removeIf(...);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>新增属性<code>returnForm</code>来判断每天闭馆时哪些图书逾期，以修改对应用户信用分：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> List&lt;Map&lt;String, Integer&gt;&gt; returnForm = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(<span class="number">500</span>);</span><br><span class="line"><span class="comment">// key为用户id，value为应还书籍数量</span></span><br><span class="line"><span class="comment">// 输入事件在 [2024-01-01] 至 [2024-12-31] 之间发生</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="title function_">Library</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">500</span>; ++i) &#123; returnForm.add(<span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;()); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">open</span><span class="params">(LocalDate date)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">day</span> <span class="operator">=</span> <span class="built_in">this</span>.date + <span class="number">1</span>; day &lt; date.getDayOfYear(); ++day) &#123;</span><br><span class="line">        returnForm.get(day).forEach((key, value) -&gt; users.get(key).changeCredit(-<span class="number">2</span> * value));</span><br><span class="line">    &#125; <span class="comment">// 日期不连续，开馆时也要检查</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">close</span><span class="params">(LocalDate date)</span> &#123;</span><br><span class="line">    <span class="comment">// 闭馆时检查今天应该收回哪些书籍</span></span><br><span class="line">	returnForm.get(<span class="built_in">this</span>.date).forEach((key, value) -&gt; users.get(key).changeCredit(-<span class="number">2</span> * value));</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	然后进行以下操作时记得更新 returnForm</span></span><br><span class="line"><span class="comment">	borrowBook, returnBook, pickBook, renewBook</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="思维演进">思维演进</h2>
+<h3 id="架构设计">架构设计</h3>
+<p>从先导课到如今 oo 正课迎来尾声，从开始时对 Java 编程的学习，到体会和学习面向对象的设计思想，我的确收获颇深，也算是和课程的名字（面向对象设计与构造）相符了吧。</p>
+<p>在 Unit1 中，我接触到了层次化设计的思想，学习了递归下降这样的实践方法。除了重新捡起先导课 Java 语法的知识，抽象问题的能力和架构设计的感觉也逐渐从无到有地发展起来。本学期的唯一一次大重构也发生在这个单元。总的来说，这单元的学习给我打开了面向对象设计的大门，让我了解和学习了许多结构和层次的思想。</p>
+<p>在 Unit2 中，接触到了多线程设计的问题。同时这一时期，操作系统课也了解了些许相关的知识。不过由于是第一次建立起对多线程运行机制的认识，这单元的迭代作业可谓是至暗时刻。在无数次 debug 以及动手实现影子电梯之后，终于在这个单元快要结束的时候，我才对各个线程和类之间如何交互、如何保证安全性有了很清晰的认知，只是可惜两次作业中的影子电梯没能检查出所有的线程安全问题、没能安全通过这个单元，也算是一个遗憾了。</p>
+<p>在 Unit3 中，接触到了契约式设计，感觉这个思想还是挺好的，然后也学到了 JML 对于 JUnit 测试的帮助。</p>
+<p>在 Unit4 中，则是接触了正向建模开发这一思想。在这单元的迭代作业中，使用的文字版建模让我很快完成了每次任务。在写代码之前进行总体的架构设计、并在实现过程中不断改进，确实是提高效率、减缓代码屎山化的不二选择。</p>
+<h3 id="测试">测试</h3>
+<p>很惭愧，这个学期没有搭建一个自己的评测机，大部分时候是白嫖其他同学的评测机，然后自己再手搓数据进行压力测试、反复阅读指导书和代码测试 Corner Case 。</p>
+<p>学习 oo 之前对测试的认识就是简答地查看测试用例的结果是否正确，但之后发现测试是很丰富的，包括主要接触到的黑箱测试、白箱测试，以及单元测试、集成测试、系统测试等等。感触最深的还是 Unit3 对于 JML 规格的学习，这种测试方法在契约式设计时对于代码的正确性检查应该是很有帮助的。</p>
+<h2 id="课程收获">课程收获</h2>
+<p>不管怎么说，还是顺利结束了这门声名远扬的课程的学习。虽然感觉最后没有实现幻想中的完全胜利，也没有像一些同学收获那么多，但还是学到了一些或感兴趣或有用的知识和思想——层次化设计、多线程、契约式设计等等。虽然熬夜重构第二次作业时因拙劣的架构和不熟悉的语法特性而破防，虽然费了很多心思写的影子电梯还是被测出了 bug ……但更能抗压了，<s>更能 debug 了</s>。如果重新来过可能结局会好那么一点，不过过程总是这样的。失败总是贯穿始终，遗憾才是常态，就这样吧。</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>BUAA-OO-2024-Unit4</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://einniemand.top/1e5b8c04.html">https://einniemand.top/1e5b8c04.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>EinNiemand</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2024-05-26</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2025-12-23</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OO/">OO</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-zyxvqy_3840x2160.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/429d8dff.html" title="BUAA-OS-2024-Lab4"><img class="cover" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-z8dg9y_1920x1080.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">BUAA-OS-2024-Lab4</div></div></a></div><div class="next-post pull-right"><a href="/803f19a7.html" title="BUAA-OO-2024-Unit3"><img class="cover" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-858x21_3840x2160.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">BUAA-OO-2024-Unit3</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/6e31788b.html" title="BUAA-OO-2024-Unit1"><img class="cover" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallroom-2880x1620-bg-7920e7b.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-15</div><div class="title">BUAA-OO-2024-Unit1</div></div></a></div><div><a href="/f7382931.html" title="BUAA-OO-2024-Unit2"><img class="cover" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-kxj3l1_3840x2160.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-08</div><div class="title">BUAA-OO-2024-Unit2</div></div></a></div><div><a href="/803f19a7.html" title="BUAA-OO-2024-Unit3"><img class="cover" src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/wallhaven-858x21_3840x2160.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">BUAA-OO-2024-Unit3</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/EinNiemand28/my-img@master/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">EinNiemand</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/EinNiemand28"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%90%91%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">正向建模与开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unit4%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">Unit4架构设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%9E%B6%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">最终架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9B%BE"><span class="toc-number">2.1.1.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%9B%BE-%E4%B9%A6%E7%B1%8D"><span class="toc-number">2.1.2.</span> <span class="toc-text">状态图（书籍）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%9B%BE-%E9%A2%84%E7%BA%A6"><span class="toc-number">2.1.3.</span> <span class="toc-text">顺序图（预约）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E8%BF%87%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">迭代过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E6%BC%94%E8%BF%9B"><span class="toc-number">3.</span> <span class="toc-text">思维演进</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.</span> <span class="toc-text">架构设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">3.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E6%94%B6%E8%8E%B7"><span class="toc-number">4.</span> <span class="toc-text">课程收获</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By EinNiemand</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-api-sand-ten.vercel.app/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-api-sand-ten.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      GLOBAL_CONFIG_SITE.isPost && getCount()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script defer src="/js/cursor.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
